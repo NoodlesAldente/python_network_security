@@ -5,8 +5,8 @@ import optparse
 
 def get_arguments():
     parser= optparse.OptionParser()
-    parser.add_option("-i", "--interface", dest="interface", help="Interface its change MAC address")
-    parser.add_option("-m", "--mac_adress", dest="mac_address", help="MAC adress to change")
+    parser.add_option("-i", "--interface", dest="interface", help="Specify the interface on which we change the mac address.")
+    parser.add_option("-m", "--mac_adress", dest="mac_address", help="Specify the new MAC address for the selected interfaceS")
     (options, arguments) = parser.parse_args()
     if not options.interface:
         parser.error('[-] Please specify an interface, use --help for more informations.')
